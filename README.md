@@ -9,7 +9,7 @@ The **WooPress License Hub Client** allows you to integrate license key validati
 Install via [Composer](https://getcomposer.org/):
 
 ```bash
-composer require ziorwebdev/woopress-license-hub-client
+composer require ziorwebdev/woopress-license-hub-client:dev-main
 ```
 
 ---
