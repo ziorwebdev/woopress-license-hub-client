@@ -1,7 +1,11 @@
-<?php if ( ! defined( 'ABSPATH' ) ) {
-exit;} ?>
-<div class="wrap about-wrap full-width-layout">
+<?php
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+?>
+<div class="wrap about-wrap full-width-layout woopress-license-hub-client-wrap">
 	<form method="post">
+		<h3><?php echo esc_html( $plugin_name ); ?> License</h3>
 		<?php settings_fields( sanitize_key( $plugin_slug . '-woopress-license-hub-client-create' ) ); ?>
 		<table class="widefat striped">
 			<thead>
@@ -104,5 +108,10 @@ exit;} ?>
 				</p>
 				<?php endif; ?>
 		<?php endif; ?>
+		<style>
+			.woopress-license-hub-client-wrap td input {
+				width: 100%
+			}
+		</style>
 	</form>
 </div>

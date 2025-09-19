@@ -119,11 +119,12 @@ class Load {
 			$submenu_title,
 			'manage_options',
 			$menu_slug_license,
-			function () {
+			function () use ( $plugin_name ) {
 				$plugin_slug           = $this->plugin->get_slug();
 				$activation            = $this->activation->get();
 				$user_data             = $this->user_data->get();
 				$activation_delete_url = $this->plugin->get_activation_delete_url();
+				$plugin_name           = $plugin_name;
 				include __DIR__ . '/view/license.php';
 			},
 			99
