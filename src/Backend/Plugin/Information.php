@@ -80,7 +80,6 @@ class Information {
 		$plugin->new_version    = $product->version;
 		$plugin->url            = $product->homepage;
 		$plugin->tested         = $product->tested;
-		$plugin->upgrade_notice = $product->upgrade_notice;
 		$plugin->icons          = array(
 			'default' => $product->icon,
 		);
@@ -99,15 +98,9 @@ class Information {
 		$plugin->last_updated    = $product->last_updated;
 		$plugin->added           = $product->added;
 		$plugin->sections        = array(
-			'description' => preg_replace( '/<h2(.*?)<\/h2>/si', '<h3"$1</h3>', $product->description ),
-			'changelog'   => wpautop( $product->changelog ),
-			'screenshots' => $product->screenshots,
+			'changelog'   => wpautop( $product->changelog )
 		);
 		$plugin->donate_link     = $this->plugin->get_url();
-		$plugin->banners         = array(
-			'low'  => $product->banner_low,
-			'high' => $product->banner_high,
-		);
 
 		$transient->no_update[ $this->plugin->get_base() ] = $plugin;
 
