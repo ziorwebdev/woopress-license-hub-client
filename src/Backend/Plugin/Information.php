@@ -97,9 +97,7 @@ class Information {
 		$plugin->active_installs = null;
 		$plugin->last_updated    = $product->last_updated;
 		$plugin->added           = $product->added;
-		$plugin->sections        = array(
-			'changelog'   => wpautop( $product->changelog )
-		);
+		$plugin->changelog       = wpautop( $product->changelog );
 		$plugin->donate_link     = $this->plugin->get_url();
 
 		$transient->no_update[ $this->plugin->get_base() ] = $plugin;
