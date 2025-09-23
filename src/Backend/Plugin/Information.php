@@ -97,8 +97,12 @@ class Information {
 		$plugin->active_installs = null;
 		$plugin->last_updated    = $product->last_updated;
 		$plugin->added           = $product->added;
-		$plugin->changelog       = wpautop( $product->changelog );
-		$plugin->donate_link     = $this->plugin->get_url();
+		$plugin->sections        = array(
+			'description' => preg_replace( '/<h2(.*?)<\/h2>/si', '<h3"$1</h3>', $product->description ),
+			'changelog'   => wpautop( $product->changelog ),
+			'screenshots' => $product->screenshots
+		);
+		$plugin->donate_link = $this->plugin->get_url();
 
 		$transient->no_update[ $this->plugin->get_base() ] = $plugin;
 
