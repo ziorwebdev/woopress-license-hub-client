@@ -236,7 +236,7 @@ class Load {
 			'<p><strong>%1$s</strong> %2$s</p>',
 			esc_html__( 'Important:', 'woopress-license-hub-client' ),
 			sprintf(
-				esc_html__( 'Premium features for %s will be deactivated because your license is not active. Please resolve this issue to restore full functionality.', 'woopress-license-hub-client' ),
+				esc_html__( '%s will be deactivated because your license is not active. Please resolve this issue to restore full functionality.', 'woopress-license-hub-client' ),
 				esc_html( $plugin_name )
 			)
 		);
