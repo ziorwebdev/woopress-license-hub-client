@@ -102,7 +102,7 @@ class Information {
 			'changelog'   => wpautop( $product->changelog ),
 			'screenshots' => $product->screenshots
 		);
-		$plugin->donate_link = $this->plugin->get_url();
+
 		$plugin->banners     = array(
 			'low'  => $product->banner_low,
 			'high' => $product->banner_high,
