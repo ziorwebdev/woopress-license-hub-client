@@ -92,9 +92,9 @@ class Information {
 		$plugin->name            = $product->name;
 		$plugin->author          = $product->author;
 		$plugin->requires        = $product->requires;
-		$plugin->rating          = 100;
-		$plugin->num_ratings     = 5;
-		$plugin->active_installs = 10000;
+		$plugin->rating          = null;
+		$plugin->num_ratings     = null;
+		$plugin->active_installs = null;
 		$plugin->last_updated    = $product->last_updated;
 		$plugin->added           = $product->added;
 		$plugin->sections        = array(
