@@ -69,7 +69,7 @@ If your plugin is named **"My Plugin"** and your plugin slug is `my-plugin`, a t
 ```php
 $_your_prefix_license_hub_client = woopress_license_hub_client(
 	array(
-		'api_url'           => 'https://licenses.mysite.com/wp-json/wc/woopress-license-hub-client/',
+		'api_url'           => 'https://licenses.mysite.com/wp-json/wc/woopress-license-hub/',
 		'product_key'       => 'myplugin_1234567890abcdef',
 		'plugin_file'       => __FILE__,
 		'plugin_name'       => 'My Plugin',
