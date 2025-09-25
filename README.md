@@ -26,7 +26,7 @@ if ( ! function_exists( 'your_prefix_license_hub_client_integration' ) ) {
 		if ( ! isset( $_your_prefix_license_hub_client ) ) {
 			$_your_prefix_license_hub_client = woopress_license_hub_client(
 				array(
-					'api_url'           => 'https://your-site.com/wp-json/wc/woopress-license-hub-client/',
+					'api_url'           => 'https://your-site.com/wp-json/wc/woopress-license-hub/',
 					'product_key'       => 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
 					'plugin_file'       => __FILE__,
 					'plugin_name'       => 'Your Plugin Name',
