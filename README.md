@@ -52,7 +52,7 @@ The `woopress_license_hub_client()` function accepts an **array of arguments** t
 
 | Key                  | Required | Description |
 |-----------------------|----------|-------------|
-| **`api_url`**         | ✅ Yes   | The full REST API URL of your License Hub server. Example: `https://your-site.com/wp-json/wc/woopress-license-hub-client/` |
+| **`api_url`**         | ✅ Yes   | The full REST API URL of your License Hub server. Example: `https://your-site.com/wp-json/wc/woopress-license-hub/` |
 | **`product_key`**     | ✅ Yes   | The unique product key registered in your License Hub server. Replace `xxxxxxxxxxxxxxxxxxxxxxxxxxxxx` with your actual product key. |
 | **`plugin_file`**     | ✅ Yes   | Typically `__FILE__`. Used by WordPress to identify the plugin file where the client is running. |
 | **`plugin_name`**     | ✅ Yes   | The display name of your plugin (e.g., `"My Awesome Plugin"`). This name will appear in the License page. |
