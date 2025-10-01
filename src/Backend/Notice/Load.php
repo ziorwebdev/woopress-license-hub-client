@@ -164,9 +164,8 @@ class Load {
 		);
 
 		$message = sprintf(
-			esc_html__( 'Hello %1$s, your license has expired. You can still access premium features for 7 more days (until %2$s). Renew now to avoid losing them.', 'woopress-license-hub-client' ),
+			esc_html__( 'Hello %1$s, your license has expired. Renew your license to continue receiving updates and support.', 'woopress-license-hub-client' ),
 			esc_html( $user->display_name ),
-			! empty( $activation['license_expiration'] ) ? esc_html( $activation['license_expiration'] ) : esc_html__( 'unknown date', 'woopress-license-hub-client' )
 		);
 
 		$renew_btn = sprintf(
