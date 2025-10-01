@@ -88,7 +88,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		</table>
 		<?php if ( $activation ) : ?>
 			<?php if ( empty( $activation_delete_url ) ) : ?>
-				<?php submit_button( esc_html__( 'Delete', 'woopress-license-hub-client' ), 'secondary' ); ?>
+				<?php submit_button( esc_html__( 'Deactivate', 'woopress-license-hub-client' ), 'secondary' ); ?>
 			<?php else : ?>
 				<p class="submit" style="font-size: 14px;">
 				<?php
