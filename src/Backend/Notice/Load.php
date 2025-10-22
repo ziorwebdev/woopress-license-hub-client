@@ -65,6 +65,14 @@ class Load {
 	 * @return void
 	 */
 	public function add_license_activate() {
+		$menu_slug_license = $this->plugin->get_license_menu_slug();
+		$screen            = get_current_screen();
+
+		// If this is not the license page, do not display notice.
+		if ( $screen && strpos( $screen->base, $menu_slug_license ) === false ) {
+			return;
+		}
+
 		if ( 'none' !== $this->activation->status() ) {
 			return;
 		}
@@ -140,6 +148,14 @@ class Load {
 	 * @return void
 	 */
 	public function add_license_expired() {
+		$menu_slug_license = $this->plugin->get_license_menu_slug();
+		$screen            = get_current_screen();
+
+		// If this is not the license page, do not display notice.
+		if ( $screen && strpos( $screen->base, $menu_slug_license ) === false ) {
+			return;
+		}
+
 		// Don't show if already dismissed within 7 days.
 		$dismissed_until = (int) get_user_meta( get_current_user_id(), '_license_expired_dismissed_until', true );
 		if ( $dismissed_until && $dismissed_until > time() ) {
@@ -207,6 +223,14 @@ class Load {
 	 * @return void
 	 */
 	public function add_license_error() {
+		$menu_slug_license = $this->plugin->get_license_menu_slug();
+		$screen            = get_current_screen();
+
+		// If this is not the license page, do not display notice.
+		if ( $screen && strpos( $screen->base, $menu_slug_license ) === false ) {
+			return;
+		}
+
 		if ( 'error' !== $this->activation->status() ) {
 			return;
 		}
