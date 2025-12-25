@@ -259,7 +259,7 @@ class Load {
 			'<p><strong>%1$s</strong> %2$s</p>',
 			esc_html__( 'Important:', 'woopress-license-hub-client' ),
 			sprintf(
-				esc_html__( '%s will not be able to update because your license is not active. Please resolve this issue to be able to update the plugin.', 'woopress-license-hub-client' ),
+				esc_html__( '%s will continue to function, but access to future updates will be disabled. Please resolve this issue to enable plugin updates.', 'woopress-license-hub-client' ),
 				esc_html( $plugin_name )
 			)
 		);
