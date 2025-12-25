@@ -25,14 +25,14 @@ class Load {
 	 * @var Model_Plugin
 	 */
 	protected $plugin;
-	
+
 	/**
 	 * Activation model
 	 *
 	 * @var Model_Activation
 	 */
 	protected $activation;
-	
+
 	/**
 	 * User data model
 	 *
@@ -43,9 +43,9 @@ class Load {
 	/**
 	 * Constructor
 	 *
-	 * @param Model_Plugin $model_plugin Plugin model
+	 * @param Model_Plugin     $model_plugin Plugin model
 	 * @param Model_Activation $model_activation Activation model
-	 * @param Model_User_Data $model_user_data User data model
+	 * @param Model_User_Data  $model_user_data User data model
 	 * @since 1.0.0
 	 */
 	public function __construct( Model_Plugin $model_plugin, Model_Activation $model_activation, ?Model_User_Data $model_user_data = null ) {
@@ -83,7 +83,7 @@ class Load {
 		}
 
 		// Text strings
-		$title   = sprintf(
+		$title = sprintf(
 			esc_html__( 'Please activate your %s license key.', 'woopress-license-hub-client' ),
 			esc_html( $this->plugin->get_name() )
 		);
@@ -123,7 +123,7 @@ class Load {
 			: '';
 
 		// Final HTML
-		echo sprintf(
+		printf(
 			'<div class="notice notice-error">
 				<div class="notice-container" style="padding:10px 0; display:flex; align-items:center;">
 					<div class="notice-content" style="margin-left:15px;">
@@ -174,7 +174,7 @@ class Load {
 		$user       = wp_get_current_user();
 
 		// Message formatting
-		$title   = sprintf(
+		$title = sprintf(
 			esc_html__( 'Your %s license has expired.', 'woopress-license-hub-client' ),
 			esc_html( $this->plugin->get_name() )
 		);
@@ -200,7 +200,7 @@ class Load {
 		}
 
 		// Final HTML output
-		echo sprintf(
+		printf(
 			'<div class="notice notice-error is-dismissible license-expired-notice" data-notice="license_expired">
 				<p><strong>%1$s</strong><br/>%2$s</p>
 				<p style="display:flex;align-items:center;gap:15px;">%3$s %4$s</p>
@@ -259,7 +259,7 @@ class Load {
 			'<p><strong>%1$s</strong> %2$s</p>',
 			esc_html__( 'Important:', 'woopress-license-hub-client' ),
 			sprintf(
-				esc_html__( '%s will be deactivated because your license is not active. Please resolve this issue to restore full functionality.', 'woopress-license-hub-client' ),
+				esc_html__( '%s will not be able to update because your license is not active. Please resolve this issue to be able to update the plugin.', 'woopress-license-hub-client' ),
 				esc_html( $plugin_name )
 			)
 		);
@@ -290,7 +290,7 @@ class Load {
 			: '';
 
 		// Final output
-		echo sprintf(
+		printf(
 			'<div class="notice notice-error">
 				<div class="notice-container" style="padding:10px 0; display:flex; align-items:center;">
 					<div class="notice-content" style="margin-left:15px;">
