@@ -1,0 +1,52 @@
+name: Publish Release
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Read version from composer.json
+        id: version
+        run: |
+          VERSION=$(jq -r '.version' composer.json)
+
+          if [ "$VERSION" = "null" ] || [ -z "$VERSION" ]; then
+            echo "❌ Version not found in composer.json"
+            exit 1
+          fi
+
+          echo "version=v$VERSION" >> $GITHUB_OUTPUT
+
+      - name: Delete existing release and tag if they exist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TAG="${{ steps.version.outputs.version }}"
+
+          if gh release view "$TAG" > /dev/null 2>&1; then
+            echo "⚠️ Release $TAG already exists. Deleting..."
+            gh release delete "$TAG" --yes
+            git push --delete origin "$TAG" || true
+          else
+            echo "✅ No existing release for $TAG"
+          fi
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.version.outputs.version }}
+          name: Release ${{ steps.version.outputs.version }}
+          generate_release_notes: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
