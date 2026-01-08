@@ -2,10 +2,10 @@
 /**
  * Fetch interface
  *
- * @package ZiorWebDev\WooPressLicenseHubClient\Api\Fetch
+ * @package ZIORWebDev\WooPressLicenseHubClient\Api\Fetch
  * @since 1.0.0
  */
-namespace ZiorWebDev\WooPressLicenseHubClient\Api\Fetch;
+namespace ZIORWebDev\WooPressLicenseHubClient\Api\Fetch;
 
 interface FetchInterface {
 

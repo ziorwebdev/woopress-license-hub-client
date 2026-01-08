@@ -2,18 +2,18 @@
 /**
  * Route interface
  *
- * @package ZiorWebDev\WooPressLicenseHubClient\Api\Rest\Endpoints
+ * @package ZIORWebDev\WooPressLicenseHubClient\Api\Rest\Endpoints
  * @since 1.0.0
  */
-namespace ZiorWebDev\WooPressLicenseHubClient\Api\Rest\Endpoints;
+namespace ZIORWebDev\WooPressLicenseHubClient\Api\Rest\Endpoints;
 
-use ZiorWebDev\WooPressLicenseHubClient\Models\Plugin as Model_Plugin;
-use ZiorWebDev\WooPressLicenseHubClient\Models\UserData as Model_User_Data;
-use ZiorWebDev\WooPressLicenseHubClient\Models\Activation as Model_Activation;
+use ZIORWebDev\WooPressLicenseHubClient\Models\Plugin as Model_Plugin;
+use ZIORWebDev\WooPressLicenseHubClient\Models\UserData as Model_User_Data;
+use ZIORWebDev\WooPressLicenseHubClient\Models\Activation as Model_Activation;
 /**
  * Route Interface
  *
- * @package ZiorWebDev\WooPressLicenseHubClient\Api\Rest\Endpoints
+ * @package ZIORWebDev\WooPressLicenseHubClient\Api\Rest\Endpoints
  * @since 1.0.0
  */
 
@@ -23,9 +23,9 @@ interface RouteInterface {
 	 * Callback.
 	 *
 	 * @param \WP_REST_Request $request Request data.
-	 * @param Model_Plugin $model_plugin Model_Plugin instance.
+	 * @param Model_Plugin     $model_plugin Model_Plugin instance.
 	 * @param Model_Activation $model_activation Model_Activation instance.
-	 * @param Model_User_Data $model_user_data Model_User_Data instance.
+	 * @param Model_User_Data  $model_user_data Model_User_Data instance.
 	 * @return array
 	 * @since 1.0.0
 	 */

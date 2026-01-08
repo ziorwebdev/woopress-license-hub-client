@@ -1,11 +1,11 @@
 {
     "name": "ziorwebdev/woopress-license-hub-client",
-    "version": "1.1.3",
+    "version": "1.1.4",
     "description": "WooPress License Hub Client",
     "type": "library",
     "autoload": {
         "psr-4": {
-            "ZiorWebDev\\WooPressLicenseHubClient\\": "src/"
+            "ZIORWebDev\\WooPressLicenseHubClient\\": "src/"
         },
         "files": [
             "src/helpers.php"

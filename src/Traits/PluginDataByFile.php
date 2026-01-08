@@ -2,15 +2,15 @@
 /**
  * Plugin data by file trait
  *
- * @package ZiorWebDev\WooPressLicenseHubClient\Traits
+ * @package ZIORWebDev\WooPressLicenseHubClient\Traits
  * @since 1.0.0
  */
-namespace ZiorWebDev\WooPressLicenseHubClient\Traits;
+namespace ZIORWebDev\WooPressLicenseHubClient\Traits;
 
 /**
  * Trait PluginDataByFile
  *
- * @package ZiorWebDev\WooPressLicenseHubClient\Traits\PluginDataByFile
+ * @package ZIORWebDev\WooPressLicenseHubClient\Traits\PluginDataByFile
  * @since 1.0.0
  */
 trait PluginDataByFile {

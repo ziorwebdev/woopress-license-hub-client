@@ -2,18 +2,18 @@
 /**
  * Load menu
  *
- * @package ZiorWebDev\WooPressLicenseHubClient\Backend\Menu
+ * @package ZIORWebDev\WooPressLicenseHubClient\Backend\Menu
  * @since 1.0.0
  */
-namespace ZiorWebDev\WooPressLicenseHubClient\Backend\Menu;
+namespace ZIORWebDev\WooPressLicenseHubClient\Backend\Menu;
 
-use ZiorWebDev\WooPressLicenseHubClient\Models\Plugin as Model_Plugin;
-use ZiorWebDev\WooPressLicenseHubClient\Models\Activation as Model_Activation;
+use ZIORWebDev\WooPressLicenseHubClient\Models\Plugin as Model_Plugin;
+use ZIORWebDev\WooPressLicenseHubClient\Models\Activation as Model_Activation;
 
 /**
  * Controller_Menu Class
  *
- * @package ZiorWebDev\WooPressLicenseHubClient\Backend\Menu
+ * @package ZIORWebDev\WooPressLicenseHubClient\Backend\Menu
  * @since 1.0.0
  */
 class Load {
@@ -24,14 +24,14 @@ class Load {
 	 * @var Model_Plugin
 	 */
 	protected $plugin;
-	
+
 	/**
 	 * Activation model
 	 *
 	 * @var Model_Activation
 	 */
 	protected $activation;
-	
+
 	/**
 	 * User data model
 	 *
@@ -42,7 +42,7 @@ class Load {
 	/**
 	 * Constructor
 	 *
-	 * @param Model_Plugin $model_plugin Plugin model
+	 * @param Model_Plugin     $model_plugin Plugin model
 	 * @param Model_Activation $model_activation Activation model
 	 * @since 1.0.0
 	 */

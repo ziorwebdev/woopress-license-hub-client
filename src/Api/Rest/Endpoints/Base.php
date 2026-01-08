@@ -2,22 +2,22 @@
 /**
  * Base API rest endpoint
  *
- * @package ZiorWebDev\WooPressLicenseHubClient\Api\Rest\Endpoints
+ * @package ZIORWebDev\WooPressLicenseHubClient\Api\Rest\Endpoints
  * @since 1.0.0
  */
-namespace ZiorWebDev\WooPressLicenseHubClient\Api\Rest\Endpoints;
+namespace ZIORWebDev\WooPressLicenseHubClient\Api\Rest\Endpoints;
 
-use ZiorWebDev\WooPressLicenseHubClient\Api\Rest\RoutesLibrary;
-use ZiorWebDev\WooPressLicenseHubClient\Models\Plugin as Model_Plugin;
-use ZiorWebDev\WooPressLicenseHubClient\Models\UserData as Model_User_Data;
-use ZiorWebDev\WooPressLicenseHubClient\Models\Activation as Model_Activation;
+use ZIORWebDev\WooPressLicenseHubClient\Api\Rest\RoutesLibrary;
+use ZIORWebDev\WooPressLicenseHubClient\Models\Plugin as Model_Plugin;
+use ZIORWebDev\WooPressLicenseHubClient\Models\UserData as Model_User_Data;
+use ZIORWebDev\WooPressLicenseHubClient\Models\Activation as Model_Activation;
 
 /**
  * Abstract Base Class
  *
  * Implemented by rest routes classes.
  *
- * @package ZiorWebDev\WooPressLicenseHubClient\Api\Rest\Endpoints
+ * @package ZIORWebDev\WooPressLicenseHubClient\Api\Rest\Endpoints
  * @since  1.0.0
  */
 abstract class Base implements RouteInterface {
@@ -39,7 +39,7 @@ abstract class Base implements RouteInterface {
 	/**
 	 * Setup class with routes library.
 	 *
-	 * @param array $client_data Client data.
+	 * @param array         $client_data Client data.
 	 * @param RoutesLibrary $routes_library Routes library.
 	 * @since 1.0.0
 	 */
@@ -154,7 +154,7 @@ abstract class Base implements RouteInterface {
 	/**
 	 * Get error.
 	 *
-	 * @param int $code Error code.
+	 * @param int    $code Error code.
 	 * @param string $message Error message.
 	 * @return array
 	 * @since 1.0.0

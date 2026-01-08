@@ -2,20 +2,20 @@
 /**
  * User data delete API rest endpoint
  *
- * @package ZiorWebDev\WooPressLicenseHubClient\Api\Rest\Endpoints\UserData
+ * @package ZIORWebDev\WooPressLicenseHubClient\Api\Rest\Endpoints\UserData
  * @since 1.0.0
  */
-namespace ZiorWebDev\WooPressLicenseHubClient\Api\Rest\Endpoints\UserData;
+namespace ZIORWebDev\WooPressLicenseHubClient\Api\Rest\Endpoints\UserData;
 
-use ZiorWebDev\WooPressLicenseHubClient\Api\Rest\Endpoints\Base;
-use ZiorWebDev\WooPressLicenseHubClient\Models\Plugin as Model_Plugin;
-use ZiorWebDev\WooPressLicenseHubClient\Models\UserData as Model_User_Data;
-use ZiorWebDev\WooPressLicenseHubClient\Models\Activation as Model_Activation;
+use ZIORWebDev\WooPressLicenseHubClient\Api\Rest\Endpoints\Base;
+use ZIORWebDev\WooPressLicenseHubClient\Models\Plugin as Model_Plugin;
+use ZIORWebDev\WooPressLicenseHubClient\Models\UserData as Model_User_Data;
+use ZIORWebDev\WooPressLicenseHubClient\Models\Activation as Model_Activation;
 
 /**
  * API_Rest_User_Data_Delete Class
  *
- * @package ZiorWebDev\WooPressLicenseHubClient\Api\Rest\Endpoints\UserData
+ * @package ZIORWebDev\WooPressLicenseHubClient\Api\Rest\Endpoints\UserData
  * @since 1.0.0
  */
 class Delete extends Base {

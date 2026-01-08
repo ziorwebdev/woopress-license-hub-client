@@ -2,15 +2,15 @@
 /**
  * Activation status trait
  *
- * @package ZiorWebDev\WooPressLicenseHubClient\Traits
+ * @package ZIORWebDev\WooPressLicenseHubClient\Traits
  * @since 1.0.0
  */
-namespace ZiorWebDev\WooPressLicenseHubClient\Traits;
+namespace ZIORWebDev\WooPressLicenseHubClient\Traits;
 
 /**
  * Activation status trait
  *
- * @package ZiorWebDev\WooPressLicenseHubClient\Traits
+ * @package ZIORWebDev\WooPressLicenseHubClient\Traits
  * @since 1.0.0
  */
 trait ActivationStatus {

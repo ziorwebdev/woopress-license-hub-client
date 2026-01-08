@@ -2,12 +2,12 @@
 /**
  * Base model
  *
- * @package ZiorWebDev\WooPressLicenseHubClient\Models
+ * @package ZIORWebDev\WooPressLicenseHubClient\Models
  * @since 1.0.0
  */
-namespace ZiorWebDev\WooPressLicenseHubClient\Models;
+namespace ZIORWebDev\WooPressLicenseHubClient\Models;
 
-use ZiorWebDev\WooPressLicenseHubClient\Models\Plugin as Model_Plugin;
+use ZIORWebDev\WooPressLicenseHubClient\Models\Plugin as Model_Plugin;
 
 /**
  * Abstract Base Class
@@ -63,7 +63,7 @@ abstract class Base {
 	 * Get valid data parameter.
 	 *
 	 * @param string $param
-	 * @param int $length
+	 * @param int    $length
 	 * @return string
 	 * @since 1.0.0
 	 */
@@ -76,7 +76,6 @@ abstract class Base {
 			$param = substr( $param, 0, $length );
 		}
 
-		
 		return $param ? trim( $param ) : '';
 	}
 

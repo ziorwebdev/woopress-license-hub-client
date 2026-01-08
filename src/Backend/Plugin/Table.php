@@ -2,13 +2,13 @@
 /**
  * Table class
  *
- * @package ZiorWebDev\WooPressLicenseHubClient\Backend\Plugin
+ * @package ZIORWebDev\WooPressLicenseHubClient\Backend\Plugin
  * @since 1.0.0
  */
-namespace ZiorWebDev\WooPressLicenseHubClient\Backend\Plugin;
+namespace ZIORWebDev\WooPressLicenseHubClient\Backend\Plugin;
 
-use ZiorWebDev\WooPressLicenseHubClient\Models\Plugin as Model_Plugin;
-use ZiorWebDev\WooPressLicenseHubClient\Models\Activation as Model_Activation;
+use ZIORWebDev\WooPressLicenseHubClient\Models\Plugin as Model_Plugin;
+use ZIORWebDev\WooPressLicenseHubClient\Models\Activation as Model_Activation;
 
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) {
@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * Implement plugin version notification in plugins table.
  *
- * @package ZiorWebDev\WooPressLicenseHubClient\Backend\Plugin
+ * @package ZIORWebDev\WooPressLicenseHubClient\Backend\Plugin
  * @since 1.0.0
  */
 class Table {
@@ -42,21 +42,17 @@ class Table {
 	/**
 	 * Setup class.
 	 *
-	 * @param Model_Plugin $plugin
+	 * @param Model_Plugin     $plugin
 	 * @param Model_Activation $activation
 	 * @since 1.0.0
 	 */
 	public function __construct( Model_Plugin $plugin, Model_Activation $activation ) {
 		$this->plugin     = $plugin;
 		$this->activation = $activation;
-		add_action(
-			'admin_init',
-			function () {
-				add_filter( 'plugins_api', array( $this, 'add_fetch_data' ), 10, 3 );
-				// add_action( 'in_plugin_update_message-' . $this->plugin->get_base(), array( $this, 'add_update_notification' ), 10, 2 );
-				add_action( 'after_plugin_row_' . $this->plugin->get_base(), array( $this, 'add_row_notification' ), 100, 2 );
-			}
-		);
+
+		add_filter( 'plugins_api', array( $this, 'add_fetch_data' ), 10, 3 );
+		// add_action( 'in_plugin_update_message-' . $this->plugin->get_base(), array( $this, 'add_update_notification' ), 10, 2 );
+		add_action( 'after_plugin_row_' . $this->plugin->get_base(), array( $this, 'add_row_notification' ), 100, 2 );
 	}
 
 	/**
@@ -131,7 +127,7 @@ class Table {
 	 * Add error notification to the active plugin row.
 	 *
 	 * @param string $plugin_file
-	 * @param array $plugin_data
+	 * @param array  $plugin_data
 	 * @return void
 	 * @since 1.0.0
 	 */

@@ -2,18 +2,18 @@
 /**
  * Activation model
  *
- * @package ZiorWebDev\WooPressLicenseHubClient\Models
+ * @package ZIORWebDev\WooPressLicenseHubClient\Models
  * @since 1.0.0
  */
-namespace ZiorWebDev\WooPressLicenseHubClient\Models;
+namespace ZIORWebDev\WooPressLicenseHubClient\Models;
 
-use ZiorWebDev\WooPressLicenseHubClient\Traits\ActivationStatus;
+use ZIORWebDev\WooPressLicenseHubClient\Traits\ActivationStatus;
 
 /**
  * Model_Activation Class
  * This class handles fetched data of the activation in the database.
  *
- * @package ZiorWebDev\WooPressLicenseHubClient\Models
+ * @package ZIORWebDev\WooPressLicenseHubClient\Models
  * @since 1.0.0
  */
 class Activation extends Base {

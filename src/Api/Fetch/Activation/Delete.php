@@ -2,17 +2,17 @@
 /**
  * Activation delete API fetch
  *
- * @package ZiorWebDev\WooPressLicenseHubClient\Api\Fetch\Activation
+ * @package ZIORWebDev\WooPressLicenseHubClient\Api\Fetch\Activation
  * @since 1.0.0
  */
-namespace ZiorWebDev\WooPressLicenseHubClient\Api\Fetch\Activation;
+namespace ZIORWebDev\WooPressLicenseHubClient\Api\Fetch\Activation;
 
-use ZiorWebDev\WooPressLicenseHubClient\Api\Fetch\Base;
+use ZIORWebDev\WooPressLicenseHubClient\Api\Fetch\Base;
 
 /**
  * API_Fetch_Activation_Delete Class
  *
- * @package ZiorWebDev\WooPressLicenseHubClient\Api\Fetch\Activation
+ * @package ZIORWebDev\WooPressLicenseHubClient\Api\Fetch\Activation
  * @since 1.0.0
  */
 class Delete extends Base {

@@ -2,19 +2,19 @@
 /**
  * Load notice
  *
- * @package ZiorWebDev\WooPressLicenseHubClient\Backend\Notice
+ * @package ZIORWebDev\WooPressLicenseHubClient\Backend\Notice
  * @since 1.0.0
  */
-namespace ZiorWebDev\WooPressLicenseHubClient\Backend\Notice;
+namespace ZIORWebDev\WooPressLicenseHubClient\Backend\Notice;
 
-use ZiorWebDev\WooPressLicenseHubClient\Models\Plugin as Model_Plugin;
-use ZiorWebDev\WooPressLicenseHubClient\Models\Activation as Model_Activation;
-use ZiorWebDev\WooPressLicenseHubClient\Models\UserData as Model_User_Data;
+use ZIORWebDev\WooPressLicenseHubClient\Models\Plugin as Model_Plugin;
+use ZIORWebDev\WooPressLicenseHubClient\Models\Activation as Model_Activation;
+use ZIORWebDev\WooPressLicenseHubClient\Models\UserData as Model_User_Data;
 
 /**
  * Controller_Notice Class
  *
- * @package ZiorWebDev\WooPressLicenseHubClient\Backend\Notice
+ * @package ZIORWebDev\WooPressLicenseHubClient\Backend\Notice
  * @since 1.0.0
  */
 class Load {

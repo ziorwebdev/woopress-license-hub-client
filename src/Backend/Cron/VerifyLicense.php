@@ -2,22 +2,22 @@
 /**
  * Verify license cron
  *
- * @package ZiorWebDev\WooPressLicenseHubClient\Backend\Cron
+ * @package ZIORWebDev\WooPressLicenseHubClient\Backend\Cron
  * @since 1.0.0
  */
-namespace ZiorWebDev\WooPressLicenseHubClient\Backend\Cron;
+namespace ZIORWebDev\WooPressLicenseHubClient\Backend\Cron;
 
-use ZiorWebDev\WooPressLicenseHubClient\Models\Plugin as Model_Plugin;
-use ZiorWebDev\WooPressLicenseHubClient\Models\UserData as Model_User_Data;
-use ZiorWebDev\WooPressLicenseHubClient\Models\Activation as Model_Activation;
-use ZiorWebDev\WooPressLicenseHubClient\Api\Fetch\Activation\Create as API_Fetch_Activation_Create;
+use ZIORWebDev\WooPressLicenseHubClient\Models\Plugin as Model_Plugin;
+use ZIORWebDev\WooPressLicenseHubClient\Models\UserData as Model_User_Data;
+use ZIORWebDev\WooPressLicenseHubClient\Models\Activation as Model_Activation;
+use ZIORWebDev\WooPressLicenseHubClient\Api\Fetch\Activation\Create as API_Fetch_Activation_Create;
 
 /**
  * Class VerifyLicense
  *
  * Handles automatic verification of license status
  *
- * @package ZiorWebDev\WooPressLicenseHubClient\Backend\Cron
+ * @package ZIORWebDev\WooPressLicenseHubClient\Backend\Cron
  * @since 1.0.0
  */
 class VerifyLicense {
@@ -94,6 +94,7 @@ class VerifyLicense {
 
 	/**
 	 * Schedule license verification if not already scheduled
+	 *
 	 * @since 1.0.0
 	 * @return void
 	 */
@@ -105,6 +106,7 @@ class VerifyLicense {
 
 	/**
 	 * Verify license status by re-activating with API
+	 *
 	 * @since 1.0.0
 	 * @return void
 	 */
@@ -179,6 +181,7 @@ class VerifyLicense {
 
 	/**
 	 * Clean up scheduled events when plugin is deactivated
+	 *
 	 * @since 1.0.0
 	 * @return void
 	 */

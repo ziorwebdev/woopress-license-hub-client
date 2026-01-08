@@ -2,24 +2,24 @@
 /**
  * Routes library
  *
- * @package ZiorWebDev\WooPressLicenseHubClient\Api\Rest
+ * @package ZIORWebDev\WooPressLicenseHubClient\Api\Rest
  * @since 1.0.0
  */
-namespace ZiorWebDev\WooPressLicenseHubClient\Api\Rest;
+namespace ZIORWebDev\WooPressLicenseHubClient\Api\Rest;
 
-use ZiorWebDev\WooPressLicenseHubClient\Api\Rest\Endpoints\Activation\Create as API_Rest_Activation_License_Create;
-use ZiorWebDev\WooPressLicenseHubClient\Api\Rest\Endpoints\Activation\Get as API_Rest_Activation_License_Get;
-use ZiorWebDev\WooPressLicenseHubClient\Api\Rest\Endpoints\Activation\Delete as API_Rest_Activation_License_Delete;
-use ZiorWebDev\WooPressLicenseHubClient\Api\Rest\Endpoints\UserData\Create as API_Rest_User_Data_Create;
-use ZiorWebDev\WooPressLicenseHubClient\Api\Rest\Endpoints\UserData\Get as API_Rest_User_Data_Get;
-use ZiorWebDev\WooPressLicenseHubClient\Api\Rest\Endpoints\UserData\Delete as API_Rest_User_Data_Delete;
-use ZiorWebDev\WooPressLicenseHubClient\Api\Rest\Endpoints\RouteInterface;
+use ZIORWebDev\WooPressLicenseHubClient\Api\Rest\Endpoints\Activation\Create as API_Rest_Activation_License_Create;
+use ZIORWebDev\WooPressLicenseHubClient\Api\Rest\Endpoints\Activation\Get as API_Rest_Activation_License_Get;
+use ZIORWebDev\WooPressLicenseHubClient\Api\Rest\Endpoints\Activation\Delete as API_Rest_Activation_License_Delete;
+use ZIORWebDev\WooPressLicenseHubClient\Api\Rest\Endpoints\UserData\Create as API_Rest_User_Data_Create;
+use ZIORWebDev\WooPressLicenseHubClient\Api\Rest\Endpoints\UserData\Get as API_Rest_User_Data_Get;
+use ZIORWebDev\WooPressLicenseHubClient\Api\Rest\Endpoints\UserData\Delete as API_Rest_User_Data_Delete;
+use ZIORWebDev\WooPressLicenseHubClient\Api\Rest\Endpoints\RouteInterface;
 
 
 /**
  * API_Rest_Routes Class
  *
- * @package ZiorWebDev\WooPressLicenseHubClient\Api\Rest
+ * @package ZIORWebDev\WooPressLicenseHubClient\Api\Rest
  * @since 1.0.0
  */
 class RoutesLibrary {

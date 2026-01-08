@@ -2,19 +2,19 @@
 /**
  * Status change notice
  *
- * @package ZiorWebDev\WooPressLicenseHubClient\Backend\Notice
+ * @package ZIORWebDev\WooPressLicenseHubClient\Backend\Notice
  * @since 1.0.0
  */
-namespace ZiorWebDev\WooPressLicenseHubClient\Backend\Notice;
+namespace ZIORWebDev\WooPressLicenseHubClient\Backend\Notice;
 
-use ZiorWebDev\WooPressLicenseHubClient\Models\Plugin as Model_Plugin;
+use ZIORWebDev\WooPressLicenseHubClient\Models\Plugin as Model_Plugin;
 
 /**
  * Class StatusChange
  *
  * Handles the display of license status change notifications
  *
- * @package ZiorWebDev\WooPressLicenseHubClient\Backend\Notice
+ * @package ZIORWebDev\WooPressLicenseHubClient\Backend\Notice
  * @since 1.0.0
  */
 class StatusChange {

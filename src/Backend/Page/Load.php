@@ -2,21 +2,21 @@
 /**
  * Load page
  *
- * @package ZiorWebDev\WooPressLicenseHubClient\Backend\Page
+ * @package ZIORWebDev\WooPressLicenseHubClient\Backend\Page
  * @since 1.0.0
  */
-namespace ZiorWebDev\WooPressLicenseHubClient\Backend\Page;
+namespace ZIORWebDev\WooPressLicenseHubClient\Backend\Page;
 
-use ZiorWebDev\WooPressLicenseHubClient\Models\Plugin as Model_Plugin;
-use ZiorWebDev\WooPressLicenseHubClient\Models\Activation as Model_Activation;
-use ZiorWebDev\WooPressLicenseHubClient\Models\UserData as Model_User_Data;
-use ZiorWebDev\WooPressLicenseHubClient\Api\Fetch\Activation\Create as API_Fetch_Activation_Create;
-use ZiorWebDev\WooPressLicenseHubClient\Api\Fetch\Activation\Delete as API_Fetch_Activation_Delete;
+use ZIORWebDev\WooPressLicenseHubClient\Models\Plugin as Model_Plugin;
+use ZIORWebDev\WooPressLicenseHubClient\Models\Activation as Model_Activation;
+use ZIORWebDev\WooPressLicenseHubClient\Models\UserData as Model_User_Data;
+use ZIORWebDev\WooPressLicenseHubClient\Api\Fetch\Activation\Create as API_Fetch_Activation_Create;
+use ZIORWebDev\WooPressLicenseHubClient\Api\Fetch\Activation\Delete as API_Fetch_Activation_Delete;
 
 /**
  * Controller_Page Class
  *
- * @package ZiorWebDev\WooPressLicenseHubClient\Backend\Page
+ * @package ZIORWebDev\WooPressLicenseHubClient\Backend\Page
  * @since 1.0.0
  */
 class Load {
@@ -44,9 +44,9 @@ class Load {
 	/**
 	 * Constructor
 	 *
-	 * @param Model_Plugin $model_plugin Plugin model
+	 * @param Model_Plugin     $model_plugin Plugin model
 	 * @param Model_Activation $model_activation Activation model
-	 * @param Model_User_Data $model_user_data User data model
+	 * @param Model_User_Data  $model_user_data User data model
 	 * @since 1.0.0
 	 */
 	public function __construct( Model_Plugin $model_plugin, Model_Activation $model_activation, ?Model_User_Data $model_user_data = null ) {

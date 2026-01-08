@@ -2,20 +2,20 @@
 /**
  * Base API fetch
  *
- * @package ZiorWebDev\WooPressLicenseHubClient\Api\Fetch
+ * @package ZIORWebDev\WooPressLicenseHubClient\Api\Fetch
  * @since 1.0.0
  */
-namespace ZiorWebDev\WooPressLicenseHubClient\Api\Fetch;
+namespace ZIORWebDev\WooPressLicenseHubClient\Api\Fetch;
 
-use ZiorWebDev\WooPressLicenseHubClient\Api\Fetch\FetchInterface;
-use ZiorWebDev\WooPressLicenseHubClient\Models\Plugin as Model_Plugin;
+use ZIORWebDev\WooPressLicenseHubClient\Api\Fetch\FetchInterface;
+use ZIORWebDev\WooPressLicenseHubClient\Models\Plugin as Model_Plugin;
 
 /**
  * Abstract Base Class
  *
  * Implemented by fetch classes.
  *
- * @package ZiorWebDev\WooPressLicenseHubClient\Api\Fetch
+ * @package ZIORWebDev\WooPressLicenseHubClient\Api\Fetch
  * @since  1.0.0
  */
 abstract class Base implements FetchInterface {

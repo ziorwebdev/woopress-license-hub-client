@@ -2,17 +2,17 @@
 /**
  * Product update API fetch
  *
- * @package ZiorWebDev\WooPressLicenseHubClient\Api\Fetch\Product
+ * @package ZIORWebDev\WooPressLicenseHubClient\Api\Fetch\Product
  * @since 1.0.0
  */
-namespace ZiorWebDev\WooPressLicenseHubClient\Api\Fetch\Product;
+namespace ZIORWebDev\WooPressLicenseHubClient\Api\Fetch\Product;
 
-use ZiorWebDev\WooPressLicenseHubClient\Api\Fetch\Base;
+use ZIORWebDev\WooPressLicenseHubClient\Api\Fetch\Base;
 
 /**
  * API_Fetch_Product_Update Class
  *
- * @package ZiorWebDev\WooPressLicenseHubClient\Api\Fetch\Product
+ * @package ZIORWebDev\WooPressLicenseHubClient\Api\Fetch\Product
  * @since 1.0.0
  */
 class Update extends Base {

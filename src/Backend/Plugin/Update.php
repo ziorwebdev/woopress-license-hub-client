@@ -1,10 +1,10 @@
 <?php
 
-namespace ZiorWebDev\WooPressLicenseHubClient\Backend\Plugin;
+namespace ZIORWebDev\WooPressLicenseHubClient\Backend\Plugin;
 
-use ZiorWebDev\WooPressLicenseHubClient\Models\Plugin as Model_Plugin;
-use ZiorWebDev\WooPressLicenseHubClient\Models\Activation as Model_Activation;
-use ZiorWebDev\WooPressLicenseHubClient\Api\Fetch\Product\Update as API_Fetch_Product_Update;
+use ZIORWebDev\WooPressLicenseHubClient\Models\Plugin as Model_Plugin;
+use ZIORWebDev\WooPressLicenseHubClient\Models\Activation as Model_Activation;
+use ZIORWebDev\WooPressLicenseHubClient\Api\Fetch\Product\Update as API_Fetch_Product_Update;
 
 /**
  * Controller_Plugin_Update Class
@@ -40,12 +40,7 @@ class Update {
 		$this->plugin     = $plugin;
 		$this->activation = $activation;
 
-		add_action(
-			'admin_init',
-			function () {
-				add_filter( 'pre_set_site_transient_update_plugins', array( $this, 'add_fetch_data' ) );
-			}
-		);
+		add_filter( 'pre_set_site_transient_update_plugins', array( $this, 'add_fetch_data' ) );
 	}
 
 	/**

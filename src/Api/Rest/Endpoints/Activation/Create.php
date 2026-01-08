@@ -2,22 +2,22 @@
 /**
  * Activation create API rest endpoint
  *
- * @package ZiorWebDev\WooPressLicenseHubClient\Api\Rest\Endpoints\Activation
+ * @package ZIORWebDev\WooPressLicenseHubClient\Api\Rest\Endpoints\Activation
  * @since 1.0.0
  */
-namespace ZiorWebDev\WooPressLicenseHubClient\Api\Rest\Endpoints\Activation;
+namespace ZIORWebDev\WooPressLicenseHubClient\Api\Rest\Endpoints\Activation;
 
-use ZiorWebDev\WooPressLicenseHubClient\Api\Rest\Endpoints\Base;
-use ZiorWebDev\WooPressLicenseHubClient\Api\Fetch\Activation\Create as API_Fetch_Activation_Create;
+use ZIORWebDev\WooPressLicenseHubClient\Api\Rest\Endpoints\Base;
+use ZIORWebDev\WooPressLicenseHubClient\Api\Fetch\Activation\Create as API_Fetch_Activation_Create;
 
-use ZiorWebDev\WooPressLicenseHubClient\Models\Plugin as Model_Plugin;
-use ZiorWebDev\WooPressLicenseHubClient\Models\UserData as Model_User_Data;
-use ZiorWebDev\WooPressLicenseHubClient\Models\Activation as Model_Activation;
+use ZIORWebDev\WooPressLicenseHubClient\Models\Plugin as Model_Plugin;
+use ZIORWebDev\WooPressLicenseHubClient\Models\UserData as Model_User_Data;
+use ZIORWebDev\WooPressLicenseHubClient\Models\Activation as Model_Activation;
 
 /**
  * API_Rest_Activation_License_Create Class
  *
- * @package ZiorWebDev\WooPressLicenseHubClient\Api\Rest\Endpoints\Activation
+ * @package ZIORWebDev\WooPressLicenseHubClient\Api\Rest\Endpoints\Activation
  * @since 1.0.0
  */
 class Create extends Base {

@@ -2,18 +2,18 @@
 /**
  * Plugin model
  *
- * @package ZiorWebDev\WooPressLicenseHubClient\Models
+ * @package ZIORWebDev\WooPressLicenseHubClient\Models
  * @since 1.0.0
  */
-namespace ZiorWebDev\WooPressLicenseHubClient\Models;
+namespace ZIORWebDev\WooPressLicenseHubClient\Models;
 
-use ZiorWebDev\WooPressLicenseHubClient\Traits\PluginDataByFile;
+use ZIORWebDev\WooPressLicenseHubClient\Traits\PluginDataByFile;
 
 /**
  * Model_Plugin Class
  * This class handles plugin data
  *
- * @package ZiorWebDev\WooPressLicenseHubClient\Models
+ * @package ZIORWebDev\WooPressLicenseHubClient\Models
  * @since 1.0.0
  */
 class Plugin {

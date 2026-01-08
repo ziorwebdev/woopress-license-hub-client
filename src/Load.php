@@ -2,10 +2,10 @@
 /**
  * Load class
  *
- * @package ZiorWebDev\WooPressLicenseHubClient
+ * @package ZIORWebDev\WooPressLicenseHubClient
  * @since 1.0.0
  */
-namespace ZiorWebDev\WooPressLicenseHubClient;
+namespace ZIORWebDev\WooPressLicenseHubClient;
 
 /**
  * Include the Composer autoload file if you're not using Composer in your package.
@@ -15,27 +15,27 @@ namespace ZiorWebDev\WooPressLicenseHubClient;
 /**
  * Models
  */
-use ZiorWebDev\WooPressLicenseHubClient\Models\Plugin as Model_Plugin;
-use ZiorWebDev\WooPressLicenseHubClient\Models\UserData as Model_User_Data;
-use ZiorWebDev\WooPressLicenseHubClient\Models\Activation as Model_Activation;
+use ZIORWebDev\WooPressLicenseHubClient\Models\Plugin as Model_Plugin;
+use ZIORWebDev\WooPressLicenseHubClient\Models\UserData as Model_User_Data;
+use ZIORWebDev\WooPressLicenseHubClient\Models\Activation as Model_Activation;
 /**
  * API
  */
-use ZiorWebDev\WooPressLicenseHubClient\Api\Rest\RoutesLibrary as API_Rest_Routes_Library;
+use ZIORWebDev\WooPressLicenseHubClient\Api\Rest\RoutesLibrary as API_Rest_Routes_Library;
 /**
  * Controllers
  */
-use ZiorWebDev\WooPressLicenseHubClient\Backend\Plugin\Information as Controller_Plugin_Information;
-use ZiorWebDev\WooPressLicenseHubClient\Backend\Plugin\Update as Controller_Plugin_Update;
-use ZiorWebDev\WooPressLicenseHubClient\Backend\Plugin\Table as Controller_Plugin_Table;
-use ZiorWebDev\WooPressLicenseHubClient\Backend\Page\Load as Controller_Page;
-use ZiorWebDev\WooPressLicenseHubClient\Backend\Notice\Load as Controller_Notice;
-use ZiorWebDev\WooPressLicenseHubClient\Backend\Menu\Load as Controller_Menu;
-use ZiorWebDev\WooPressLicenseHubClient\Backend\Cron\VerifyLicense as Controller_Verify_License;
+use ZIORWebDev\WooPressLicenseHubClient\Backend\Plugin\Information as Controller_Plugin_Information;
+use ZIORWebDev\WooPressLicenseHubClient\Backend\Plugin\Update as Controller_Plugin_Update;
+use ZIORWebDev\WooPressLicenseHubClient\Backend\Plugin\Table as Controller_Plugin_Table;
+use ZIORWebDev\WooPressLicenseHubClient\Backend\Page\Load as Controller_Page;
+use ZIORWebDev\WooPressLicenseHubClient\Backend\Notice\Load as Controller_Notice;
+use ZIORWebDev\WooPressLicenseHubClient\Backend\Menu\Load as Controller_Menu;
+use ZIORWebDev\WooPressLicenseHubClient\Backend\Cron\VerifyLicense as Controller_Verify_License;
 /**
  * Class Load
  *
- * @package ZiorWebDev\WooPressLicenseHubClient\Load
+ * @package ZIORWebDev\WooPressLicenseHubClient\Load
  * @since 1.0.0
  */
 final class Load {

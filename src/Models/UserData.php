@@ -2,16 +2,16 @@
 /**
  * User data model
  *
- * @package ZiorWebDev\WooPressLicenseHubClient\Models
+ * @package ZIORWebDev\WooPressLicenseHubClient\Models
  * @since 1.0.0
  */
-namespace ZiorWebDev\WooPressLicenseHubClient\Models;
+namespace ZIORWebDev\WooPressLicenseHubClient\Models;
 
 /**
  * Model_User_Data Class
  * This class handles the input data of the user in the database.
  *
- * @package ZiorWebDev\WooPressLicenseHubClient\Models
+ * @package ZIORWebDev\WooPressLicenseHubClient\Models
  * @since 1.0.0
  */
 class UserData extends Base {
