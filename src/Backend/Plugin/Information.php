@@ -46,26 +46,7 @@ class Information {
 		$this->plugin     = $plugin;
 		$this->activation = $activation;
 
-		add_filter( 'plugins_api', array( $this, 'add_fetch_data' ), 10, 3 );
-		add_action( 'upgrader_process_complete', array( $this, 'clear_plugin_info_cache' ), 10, 2 );
-	}
-
-	/**
-	 * Clears cached plugin API info after a plugin is updated.
-	 *
-	 * @param object $upgrader_object The upgrader object.
-	 * @param array  $options         Array of update options.
-	 */
-	public function clear_plugin_info_cache( $upgrader_object, $options ) {
-		// Return early if not a plugin update or no plugins provided.
-		if ( empty( $options['plugins'] ) || empty( $options['type'] ) || 'plugin' !== $options['type'] ) {
-			return;
-		}
-
-		foreach ( $options['plugins'] as $plugin_file ) {
-			$slug = dirname( $plugin_file );
-			delete_transient( 'plugin_info_' . $slug );
-		}
+		add_filter( 'pre_set_site_transient_update_plugins', array( $this, 'add_fetch_data' ) );
 	}
 
 	/**
@@ -75,54 +56,54 @@ class Information {
 	 * @return object
 	 * @since 1.0.0
 	 */
-	public function add_fetch_data( $result, $action, $args ) {
-		if ( 'plugin_information' !== $action ) {
-			return $result;
+	public function add_fetch_data( $transient ) {
+		if ( empty( $transient->checked ) ) {
+			return $transient;
 		}
 
-		if ( empty( $args->slug ) || $args->slug !== $this->plugin->get_slug() ) {
-			return $result;
-		}
-
-		// Create a transient key unique to this plugin
-		$transient_key = 'plugin_info_' . $this->plugin->get_slug();
-
-		// Try to get cached data
-		$cached = get_transient( $transient_key );
-		if ( $cached ) {
-			return $cached;
-		}
-
-		// Fetch fresh data if cache is empty
 		$product = ( new API_Fetch_Product_Information( $this->plugin ) )->get_data();
 
-		if ( empty( $product ) ) {
-			return $result;
+		if ( isset( $product->error ) ) {
+			return $transient;
 		}
 
-		$plugin_data = (object) array(
-			'name'         => $product->name,
-			'slug'         => $this->plugin->get_slug(),
-			'version'      => $product->version,
-			'author'       => $product->author,
-			'homepage'     => $product->homepage,
-			'requires'     => $product->requires,
-			'tested'       => $product->tested,
-			'last_updated' => $product->last_updated,
-			'sections'     => array(
-				'description' => $product->description,
-				'changelog'   => wpautop( $product->changelog ),
-				'screenshots' => $product->screenshots,
-			),
-			'banners'      => array(
-				'low'  => $product->banner_low,
-				'high' => $product->banner_high,
-			),
+		$plugin              = new \stdClass();
+		$plugin->id          = $this->plugin->get_slug();
+		$plugin->slug        = $this->plugin->get_slug();
+		$plugin->plugin      = $this->plugin->get_base();
+		$plugin->new_version = $product->version;
+		$plugin->url         = $product->homepage;
+		$plugin->tested      = $product->tested;
+		$plugin->icons       = array(
+			'default' => $product->icon,
 		);
 
-		// Save it to transient for 12 hours
-		set_transient( $transient_key, $plugin_data, 12 * HOUR_IN_SECONDS );
+		/**
+		 * Fields for plugin info
+		 */
+		$plugin->version         = $product->version;
+		$plugin->homepage        = $product->homepage;
+		$plugin->name            = $product->name;
+		$plugin->author          = $product->author;
+		$plugin->requires        = $product->requires;
+		$plugin->rating          = null;
+		$plugin->num_ratings     = null;
+		$plugin->active_installs = null;
+		$plugin->last_updated    = $product->last_updated;
+		$plugin->added           = $product->added;
+		$plugin->sections        = array(
+			'description' => preg_replace( '/<h2(.*?)<\/h2>/si', '<h3"$1</h3>', $product->description ),
+			'changelog'   => wpautop( $product->changelog ),
+			'screenshots' => $product->screenshots,
+		);
 
-		return $plugin_data;
+		$plugin->banners = array(
+			'low'  => $product->banner_low,
+			'high' => $product->banner_high,
+		);
+
+		$transient->no_update[ $this->plugin->get_base() ] = $plugin;
+
+		return $transient;
 	}
 }
