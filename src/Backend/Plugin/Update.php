@@ -104,6 +104,7 @@ class Update {
 			 * Set the download link true to display the notice.
 			 */
 			$transient->response[ $this->plugin->get_base() ] = $plugin;
+
 			return $transient;
 		}
 

@@ -148,13 +148,13 @@ class Table {
 				<td colspan="4" class="plugin-update colspanchange">
 					<div class="update-message notice notice-error notice-alt inline">
 						<p>' .
-						'<b>' . esc_html__( 'The plugin license is not activated.', 'woopress-license-hub-client' ) . '</b> ' .
+						'<b>' . esc_html__( 'Updates are disabled because the license is not activated.', 'woopress-license-hub-client' ) . '</b> ' .
 						sprintf(
 							esc_html__( 'Please visit the %1$s to activate your license or %2$s one from our website.', 'woopress-license-hub-client' ),
 							sprintf(
 								'<a href="%s">%s</a>',
 								esc_url( $this->plugin->get_menu_license_url() ),
-								esc_html__( 'settings', 'woopress-license-hub-client' )
+								esc_html__( 'license', 'woopress-license-hub-client' )
 							),
 							sprintf(
 								'<a href="%s" target="_blank">%s</a>',
