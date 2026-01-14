@@ -102,7 +102,57 @@ class Information {
 			'high' => $product->banner_high,
 		);
 
-		$transient->no_update[ $this->plugin->get_base() ] = $plugin;
+		$plugin->package = null;
+
+		if ( ! current_user_can( 'update_plugins' ) ) {
+			return $transient;
+		}
+
+		/**
+		 * Get the license activation data.
+		 */
+		$activation = $this->activation->get();
+
+		/**
+		 * Check if the license is activated. If not, show a notice.
+		 */
+		if ( ! isset( $activation['license_key'], $activation['activation_instance'] ) ) {
+			$plugin->upgrade_notice = sprintf(
+				'</p></div><span class="notice notice-error notice-alt" style="display:block; padding: 10px;"><b>%s</b> %s</span>',
+				esc_html__( 'Activate your license.', 'woopress-license-hub-client' ),
+				sprintf(
+					esc_html__( 'Please visit %1$s to activate the license or %2$s in our website.', 'woopress-license-hub-client' ),
+					sprintf(
+						'<a href="%s" target="_blank">%s</a>',
+						esc_url( $this->plugin->get_menu_license_url() ),
+						esc_html__( 'settings', 'woopress-license-hub-client' )
+					),
+					sprintf(
+						'<a href="%s" target="_blank">%s</a>',
+						esc_url( $this->plugin->get_url() ),
+						esc_html__( 'purchase', 'woopress-license-hub-client' )
+					)
+				)
+			);
+
+			$transient->response[ $this->plugin->get_base() ] = $plugin;
+
+			return $transient;
+		}
+
+		$update_params = http_build_query(
+			array(
+				'license_key'         => $activation['license_key'],
+				'activation_instance' => $activation['activation_instance'],
+			)
+		);
+
+		$update_url = "{$product->package}?{$update_params}";
+
+		$plugin->package       = $update_url;
+		$plugin->download_link = $update_url;
+
+		$transient->response[ $this->plugin->get_base() ] = $plugin;
 
 		return $transient;
 	}

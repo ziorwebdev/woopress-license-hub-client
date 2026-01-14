@@ -126,7 +126,7 @@ final class Load {
 				* Load admin-specific controllers
 				*/
 				new Controller_Plugin_Information( $this->plugin, $this->activation, $this->user_data );
-				new Controller_Plugin_Update( $this->plugin, $this->activation, $this->user_data );
+				// new Controller_Plugin_Update( $this->plugin, $this->activation, $this->user_data );
 				new Controller_Plugin_Table( $this->plugin, $this->activation, $this->user_data );
 				new Controller_Page( $this->plugin, $this->activation, $this->user_data );
 				new Controller_Notice( $this->plugin, $this->activation, $this->user_data );
