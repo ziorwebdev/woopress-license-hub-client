@@ -86,6 +86,7 @@ class Information {
 		$plugin->name            = $product->name;
 		$plugin->author          = $product->author;
 		$plugin->requires        = $product->requires;
+		$plugin->requires_php    = $product->requires_php;
 		$plugin->rating          = null;
 		$plugin->num_ratings     = null;
 		$plugin->active_installs = null;
