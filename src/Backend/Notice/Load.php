@@ -42,7 +42,7 @@ class Load {
 
 	/**
 	 * Show notification condition.
-	 * 
+	 *
 	 * @return bool
 	 */
 	private function is_show_notification() {
@@ -85,7 +85,7 @@ class Load {
 			return;
 		}
 
-		if ( 'none' !== $this->activation->status() ) {
+		if ( 'valid' === $this->activation->status() ) {
 			return;
 		}
 
