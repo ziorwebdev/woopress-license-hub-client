@@ -49,9 +49,6 @@ class Load {
 	public function __construct( Model_Plugin $model_plugin, Model_Activation $model_activation ) {
 		$this->plugin     = $model_plugin;
 		$this->activation = $model_activation;
-
-		// TODO: Implement alert.
-		// add_action( 'admin_footer', array( $this, 'add_menu_alert' ) );
 	}
 
 	/**

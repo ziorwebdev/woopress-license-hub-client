@@ -41,6 +41,22 @@ class Load {
 	protected $user_data;
 
 	/**
+	 * Show notification condition.
+	 * 
+	 * @return bool
+	 */
+	private function is_show_notification() {
+		$parent_slug = $this->plugin->get_parent_menu_slug();
+		$screen      = get_current_screen();
+
+		if ( ! $screen ) {
+			return false;
+		}
+
+		return strpos( $screen->parent_base, $parent_slug ) !== false;
+	}
+
+	/**
 	 * Constructor
 	 *
 	 * @param Model_Plugin     $model_plugin Plugin model
@@ -65,11 +81,7 @@ class Load {
 	 * @return void
 	 */
 	public function add_license_activate() {
-		$menu_slug_license = $this->plugin->get_license_menu_slug();
-		$screen            = get_current_screen();
-
-		// If this is not the license page, do not display notice.
-		if ( $screen && strpos( $screen->base, $menu_slug_license ) === false ) {
+		if ( ! $this->is_show_notification() ) {
 			return;
 		}
 
@@ -78,6 +90,7 @@ class Load {
 		}
 
 		$license_url = $this->plugin->get_menu_license_url();
+
 		if ( ! $license_url ) {
 			return;
 		}
@@ -89,7 +102,7 @@ class Load {
 		);
 
 		$message = esc_html__(
-			'Please complete the license activation process to receive automatic updates and enable all premium features.',
+			'Please complete the license activation process to receive automatic updates.',
 			'woopress-license-hub-client'
 		);
 
@@ -148,11 +161,7 @@ class Load {
 	 * @return void
 	 */
 	public function add_license_expired() {
-		$menu_slug_license = $this->plugin->get_license_menu_slug();
-		$screen            = get_current_screen();
-
-		// If this is not the license page, do not display notice.
-		if ( $screen && strpos( $screen->base, $menu_slug_license ) === false ) {
+		if ( ! $this->is_show_notification() ) {
 			return;
 		}
 
@@ -210,10 +219,6 @@ class Load {
 			$renew_btn,
 			$support_btn
 		);
-
-		// TODO: Make the notice dismissible
-		// Enqueue dismiss script
-		// add_action( 'admin_footer', array( $this, 'enqueue_license_notice_script' ) );
 	}
 
 	/**

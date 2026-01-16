@@ -150,7 +150,7 @@ class Table {
 						<p>' .
 						'<b>' . esc_html__( 'Updates are disabled because the license is not activated.', 'woopress-license-hub-client' ) . '</b> ' .
 						sprintf(
-							esc_html__( 'Please visit the %1$s to activate your license or %2$s one from our website.', 'woopress-license-hub-client' ),
+							esc_html__( 'Please visit the %1$s page to activate your license or %2$s one from our website.', 'woopress-license-hub-client' ),
 							sprintf(
 								'<a href="%s">%s</a>',
 								esc_url( $this->plugin->get_menu_license_url() ),
