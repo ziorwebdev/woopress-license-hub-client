@@ -1,6 +1,6 @@
 # WooPress License Hub Client
 
-The **WooPress License Hub Client** allows you to integrate license key validation into your WordPress plugins or themes. It communicates with the **WooPress License Hub** server to validate licenses when your product is installed on a customer’s site.
+**WooPress License Hub Client** is a WordPress client library for integrating license activation, deactivation, renewal, and validation into premium plugins and themes. It communicates with WooPress License Hub, a WordPress license manager plugin that acts as the license server, to handle all license lifecycle operations via API. This package is client-only and requires a configured WooPress License Hub installation.
 
 ---
 
