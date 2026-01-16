@@ -232,11 +232,7 @@ class Load {
 	 * @return void
 	 */
 	public function add_license_error() {
-		$menu_slug_license = $this->plugin->get_license_menu_slug();
-		$screen            = get_current_screen();
-
-		// If this is not the license page, do not display notice.
-		if ( $screen && strpos( $screen->base, $menu_slug_license ) === false ) {
+		if ( ! $this->is_show_notification() ) {
 			return;
 		}
 
