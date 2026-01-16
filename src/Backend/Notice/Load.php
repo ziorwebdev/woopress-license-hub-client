@@ -53,7 +53,10 @@ class Load {
 			return false;
 		}
 
-		return strpos( $screen->parent_base, $parent_slug ) !== false;
+		$page_slug         = sanitize_text_field( wp_unslash( $_GET['page'] ?? '' ) );
+		$show_notification = strpos( $screen->parent_base, $parent_slug ) !== false || $page_slug === $this->plugin->get_license_menu_slug();
+
+		return apply_filters( 'woopress_license_hub_client_show_notification', $show_notification, $this->plugin, $screen );
 	}
 
 	/**
@@ -85,7 +88,7 @@ class Load {
 			return;
 		}
 
-		if ( 'valid' === $this->activation->status() ) {
+		if ( 'none' !== $this->activation->status() ) {
 			return;
 		}
 
@@ -167,6 +170,7 @@ class Load {
 
 		// Don't show if already dismissed within 7 days.
 		$dismissed_until = (int) get_user_meta( get_current_user_id(), '_license_expired_dismissed_until', true );
+
 		if ( $dismissed_until && $dismissed_until > time() ) {
 			return;
 		}
